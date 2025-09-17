@@ -1,0 +1,21 @@
+syntax = "proto3";
+package logproto;
+
+option java_multiple_files = true;
+option java_outer_classname = "LogProto"; // 파일 묶음 클래스 이름
+option java_package = "com.example.logproto"; // 자바 패키지명 (추천)
+
+service LogService {
+  rpc SendLog (LogRequest) returns (LogResponse);
+}
+
+message LogRequest {
+  string timestamp = 1;
+  string level = 2;     // INFO/WARN/ERROR
+  string service = 3;   // order/payment/user 등
+  string message = 4;
+}
+
+message LogResponse {
+  string status = 1;    // "OK"
+}
