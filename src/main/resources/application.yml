@@ -1,0 +1,5 @@
+server:
+  port: 8081   # web 포트
+grpc:
+  server:
+    port: 9090 # gRPC 포트
