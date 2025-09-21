@@ -31,9 +31,6 @@
   - `LogRequest` 메시지 전송
   - 응답(`LogResponse`) 수신
 
-#### 실행 순서
-1. 서버 실행
-   ```bash
-   ./gradlew bootRun
+
 
   
